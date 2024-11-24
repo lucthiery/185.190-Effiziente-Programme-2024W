@@ -1,0 +1,6 @@
+files:
+  file1: "data/f1.csv"
+  file2: "data/f2.csv"
+  file3: "data/f3.csv"
+  file4: "data/f4.csv"
+log_file: "runtime_log.txt"
