@@ -31,7 +31,8 @@ def myjoin(config_path="config.yaml"):
     """
     # Start time logging
     log_time("Join operation started.")
-    start_time = time.time()
+    start_time = time.process_time()
+    start_wall_time = time.time()
 
     config = load_config(config_path)
 
@@ -79,10 +80,26 @@ def myjoin(config_path="config.yaml"):
         for line in output:
             out_file.write(",".join(line) + "\n")
 
-    # End time logging
-    end_time = time.time()
-    elapsed_time = end_time - start_time
-    log_time(f"Join operation completed. Elapsed time: {elapsed_time:.2f} seconds.")
+    # End time logging with process_time()
+    end_time = time.process_time()
+    end_wall_time = time.time()
+
+    # Calculate CPU time and wall time
+    cpu_time = end_time - start_time
+    wall_time = end_wall_time - start_wall_time
+
+    # Log the times
+    log_time(f"Join operation completed.")
+    log_time(f"CPU time: {cpu_time:.4f} seconds")
+    log_time(f"Wall time: {wall_time:.4f} seconds")
+
+    print(f"Join operation complete. Output saved to output.csv.")
+    print(f"CPU time: {cpu_time:.4f} seconds")
+    print(f"Wall time: {wall_time:.4f} seconds")
 
     print("Join operation complete. Output saved to output.csv.")
     return output
+
+if __name__ == "__main__":
+    print("Running myjoin...")
+    output = myjoin("config.yaml")
