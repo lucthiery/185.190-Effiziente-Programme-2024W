@@ -14,3 +14,6 @@
 2024-12-07 15:11:26.938770 - CPU time: 530.2888 seconds
 2024-12-07 15:11:26.938816 - Wall time: 702.0557 seconds
 2024-12-07 15:19:01.557042 - Join operation started.
+2024-12-13 14:29:01.657782 - Join operation started.
+2024-12-13 14:29:21.552462 - Join operation started.
+2024-12-13 14:30:15.695157 - Join operation started.
