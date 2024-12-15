@@ -5,4 +5,4 @@ def search_in_file(file_path, search_string):
                 print(line.strip())  # Print the whole row
 
 # Example usage:
-search_in_file('data/f4.csv', '1H4YIF8Z6VD5ALVBZ')
+search_in_file('../data/f4.csv', '1H4YIF8Z6VD5ALVBZ')

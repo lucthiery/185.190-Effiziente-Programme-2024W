@@ -13,7 +13,7 @@ password = os.getenv("PASSWORD")  # Replace or use a secure method like getpass(
 project_dir = os.getenv("PROJECT_DIR")
 
 # Local directory to save files
-local_dir = "./data"
+local_dir = "../data"
 os.makedirs(local_dir, exist_ok=True)
 
 # Connect to the SSH server
